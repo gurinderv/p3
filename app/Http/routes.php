@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/lorem', function(){
+    //$lipsum = new joshtronic\LoremIpsum();
+    $lipsum = new Lorem();
+    return $lipsum->paragraphs(4, 'p');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
