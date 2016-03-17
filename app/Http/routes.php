@@ -23,6 +23,15 @@ Route::get('/lorem', function(){
     return $lipsum->paragraphs(4, 'p');
 });
 
+Route::get('/faker', function(){
+    //$lipsum = new joshtronic\LoremIpsum();
+    //require_once '\vendor\fzaninotto\faker\srcautoload.php';
+    $faker = Faker\Factory::create();
+    echo $faker->name;
+    echo $faker->freeEmail;
+    return $faker->company;
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
