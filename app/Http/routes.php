@@ -12,16 +12,22 @@
 */
 
 Route::get('/', function () {
+    //Welcome message, information about page, test if worthy
     return view('welcome');
 });
 
 
 
-Route::get('/lorem', function(){
+/*Route::get('/lorem', function(){
     //$lipsum = new joshtronic\LoremIpsum();
     $lipsum = new Lorem();
-    return $lipsum->paragraphs(4, 'p');
-});
+    return $lipsum->paragraphs(4, 'p');   
+}); */
+
+Route::get('/lorem','LoremController@getIndex');
+Route::post('lorem','LoremController@postIndex');
+
+Route::get('/book/create', 'Controller@getCreate');
 
 Route::get('/faker', function(){
     //$lipsum = new joshtronic\LoremIpsum();
