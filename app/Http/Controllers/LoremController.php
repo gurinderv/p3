@@ -16,9 +16,14 @@ class LoremController extends Controller
         return view('lorem.index');
     }
     
-    public function postIndex()
+    public function postIndex(Request $request)
     {
-        return 'post lorem';
+        $this->validate($request, [
+        'numParagraphs' => 'required|numeric'  
+    ]);
+        
+        $lipsum = new \Lorem();
+        return $lipsum->paragraphs($request->input('numParagraphs'), 'p');
     }
     
 }

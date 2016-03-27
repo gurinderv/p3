@@ -25,8 +25,18 @@ such as a page specific stylesheets.
          <h1>Lorem Ipsum Generator</h1>
         <form method="post" action="/lorem">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          Input something: <input type="text" name="test"><p>
-            <input type="submit" value="testsubmit">
+            
+          Number of paragraphs: <input type="text" name="numParagraphs" value='{{old('numParagraphs')}}'><p>
+          
+           @if(count($errors) > 0)    
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach            
+            </ul>
+        @endif  
+            
+          <input type="submit" value="Generate Text!">
         </form>
 
 {{-- sample code

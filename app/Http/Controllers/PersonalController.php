@@ -24,19 +24,11 @@ class PersonalController extends Controller
         
     ]);
         
-    //$lipsum = new joshtronic\LoremIpsum();
-    //$lipsum = new Lorem();
-    //return $lipsum->paragraphs(4, 'p');
-        return 'post personal';
+    //$lipsum = new \joshtronic\LoremIpsum();
+    $lipsum = new \Lorem();
+    return $lipsum->paragraphs(4, 'p');
+      //  return 'post personal';
     }
     
-    
-/*    Route::get('/personal', function(){
-    //$lipsum = new joshtronic\LoremIpsum();
-    //require_once '\vendor\fzaninotto\faker\srcautoload.php';
-    $faker = Faker\Factory::create();
-    echo $faker->name;
-    echo $faker->freeEmail;
-    return $faker->company;
-*/
+
 }
