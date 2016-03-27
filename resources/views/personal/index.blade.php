@@ -16,24 +16,18 @@ such as a page specific stylesheets.
 @stop
 
 @section('subheadline')
-    Lorem Generator to Spam Your Friends
+    Personal Information Generator
 @stop
 
 @section('content')
     
-        Create spam text to send to your friends. Simply input the number of paragraphs and any options you wish, then copy/paste the resulting text into your email window.
-         <h1>Lorem Ipsum Generator</h1>
-        <form method="post" action="/lorem">
+        Select the number of suckers you want to scam. The system will pull from our database of users and return their names and credit card information. Enjoy!
+         <h1>Personal Info Generator</h1>
+        <form method="post" action="/personal">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
           Input something: <input type="text" name="test"><p>
             <input type="submit" value="testsubmit">
         </form>
-
-{{-- sample code
-    $lipsum = new joshtronic\LoremIpsum();
-    $lipsum = new Lorem();
-    return $lipsum->paragraphs(4, 'p');
---}}
 
 @stop
 

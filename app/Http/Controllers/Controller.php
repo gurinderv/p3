@@ -11,8 +11,10 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
-        /**
-     * Responds to requests to GET /books/create
-     */
+    public function getIndex()
+    {
+        //return 'welcome - blade page';
+        return view('welcome');
+    }
 
 }

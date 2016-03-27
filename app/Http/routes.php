@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     //Welcome message, information about page, test if worthy
     return view('welcome');
-});
+});*/
 
-
+Route::get('/', 'Controller@getIndex');
 
 /*Route::get('/lorem', function(){
     //$lipsum = new joshtronic\LoremIpsum();
@@ -24,19 +24,7 @@ Route::get('/', function () {
     return $lipsum->paragraphs(4, 'p');   
 }); */
 
-Route::get('/lorem','LoremController@getIndex');
-Route::post('lorem','LoremController@postIndex');
 
-Route::get('/book/create', 'Controller@getCreate');
-
-Route::get('/faker', function(){
-    //$lipsum = new joshtronic\LoremIpsum();
-    //require_once '\vendor\fzaninotto\faker\srcautoload.php';
-    $faker = Faker\Factory::create();
-    echo $faker->name;
-    echo $faker->freeEmail;
-    return $faker->company;
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +38,12 @@ Route::get('/faker', function(){
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+   
+    Route::get('/lorem','LoremController@getIndex');
+    Route::post('lorem','LoremController@postIndex');
+
+    Route::get('/personal', 'PersonalController@getIndex');
+    Route::post('/personal', 'PersonalController@postIndex');
+
+    
 });
