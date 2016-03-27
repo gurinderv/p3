@@ -15,12 +15,19 @@ class PersonalController extends Controller
         return view('personal.index');
     }
     
-    public function postIndex()
+    public function postIndex(Request $request)
     {
+       // dd($request->all()); - this is a die dump test to show the values in the request
+        
+    $this->validate($request, [
+        'test' => 'required|numeric'  //use comma for each, put in numeric to show secondary validation
+        
+    ]);
+        
     //$lipsum = new joshtronic\LoremIpsum();
-    $lipsum = new Lorem();
-    return $lipsum->paragraphs(4, 'p');
-//        return 'post personal';
+    //$lipsum = new Lorem();
+    //return $lipsum->paragraphs(4, 'p');
+        return 'post personal';
     }
     
     

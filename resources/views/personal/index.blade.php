@@ -25,7 +25,21 @@ such as a page specific stylesheets.
          <h1>Personal Info Generator</h1>
         <form method="post" action="/personal">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          Input something: <input type="text" name="test"><p>
+          
+            Input something: <input type="text" name="test" value='{{old('test')}}'>  
+            
+            {{-- ****putting in the value of old and test if validation fails it'll replace with the old text so the user can fix it. put on all fields to if validation fails the user doesn't have to retype everything --}}
+            
+            <p>
+          
+        @if(count($errors) > 0)    
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach            
+            </ul>
+        @endif
+            
             <input type="submit" value="testsubmit">
         </form>
 
