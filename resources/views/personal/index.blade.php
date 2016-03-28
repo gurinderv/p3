@@ -21,17 +21,21 @@ such as a page specific stylesheets.
 
 @section('content')
     
-        Select the number of suckers you want to scam. The system will pull from our database of users and return their names and credit card information. Enjoy!
+        Select up to 5 suckers you want to scam. The system will pull from our database of users and return their names and credit card information. Enjoy!
          <h1>Personal Info Generator</h1>
         <form method="post" action="/personal">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
           
-            Input something: <input type="text" name="test" value='{{old('test')}}'>  
-            
-            {{-- ****putting in the value of old and test if validation fails it'll replace with the old text so the user can fix it. put on all fields to if validation fails the user doesn't have to retype everything --}}
-            
-            <p>
-          
+            How many suckers: 
+           <select name="numUsers" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+           </select> 
+                
+                <p>
         @if(count($errors) > 0)    
             <ul>
                 @foreach ($errors->all() as $error)
@@ -40,7 +44,7 @@ such as a page specific stylesheets.
             </ul>
         @endif
             
-            <input type="submit" value="testsubmit">
+            <input type="submit" value="Get Me Suckers!">
         </form>
 
 @stop

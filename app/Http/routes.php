@@ -11,18 +11,10 @@
 |
 */
 
-/*Route::get('/', function () {
-    //Welcome message, information about page, test if worthy
-    return view('welcome');
-});*/
+
 
 Route::get('/', 'Controller@getIndex');
 
-/*Route::get('/lorem', function(){
-    //$lipsum = new joshtronic\LoremIpsum();
-    $lipsum = new Lorem();
-    return $lipsum->paragraphs(4, 'p');   
-}); */
 
 
 

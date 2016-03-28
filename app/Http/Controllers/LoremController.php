@@ -23,7 +23,8 @@ class LoremController extends Controller
     ]);
         
         $lipsum = new \Lorem();
-        return $lipsum->paragraphs($request->input('numParagraphs'), 'p');
+        $output = $lipsum->paragraphs($request->input('numParagraphs'), 'p');
+        return view('lorem.ipsum')->with('lipsum', $output);
     }
     
 }
