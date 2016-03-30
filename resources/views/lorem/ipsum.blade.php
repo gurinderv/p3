@@ -23,7 +23,6 @@ such as a page specific stylesheets.
     
         You may now copy and paste the following text into an email to send to your friends!<p>
          
-        {{ $lipsum }}
+        {!! $lipsum !!}
 
 @stop
-

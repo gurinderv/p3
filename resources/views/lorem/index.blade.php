@@ -21,12 +21,12 @@ such as a page specific stylesheets.
 
 @section('content')
     
-        Create spam text to send to your friends. Simply input the number of paragraphs and any options you wish, then copy/paste the resulting text into your email window.
+        Create spam text to send to your friends. Simply input the number of paragraphs and any options you wish, then copy/paste the resulting text into your email window. We currently limit you to 10 paragraphs of text... because 11 is just mean!
          <h1>Lorem Ipsum Generator</h1>
         <form method="post" action="/lorem">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
-          Number of paragraphs: <input type="text" name="numParagraphs" value='{{old('numParagraphs')}}'><p>
+          Number of paragraphs (max 10): <input type="text" name="numParagraphs" alt="Number of Paragraphs" value='{{old('numParagraphs')}}'><p>
           
            @if(count($errors) > 0)    
             <ul>
@@ -39,11 +39,6 @@ such as a page specific stylesheets.
           <input type="submit" value="Generate Text!">
         </form>
 
-{{-- sample code
-    $lipsum = new joshtronic\LoremIpsum();
-    $lipsum = new Lorem();
-    return $lipsum->paragraphs(4, 'p');
---}}
 
 @stop
 
