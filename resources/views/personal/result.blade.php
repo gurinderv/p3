@@ -16,19 +16,18 @@ such as a page specific stylesheets.
 @stop
 
 @section('subheadline')
-    result of cc data
+   Personal Information Generator
 @stop
 
 @section('content')
        
-         <h1>Personal Info Results</h1>
+         <p>Below is the information you requested. Enjoy your new found wealth!</p>
       <!--  {{ $x = 0 }} -->
         @foreach ($array as $arr)
             Name: {{$name[$x]}} <br>
             Card Type: {{$arr['type']}} <br>
-            Card Number: <br>
-            Card Expiration: <br>
-            Card CVV: <br>
+            Card Number: {{$arr['number']}}<br>
+            Card Expiration: {{$arr['expirationDate']}}<br>
           <!--  {{$x += 1}} -->
 <p>
         @endforeach   

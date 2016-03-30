@@ -34,6 +34,7 @@ class PersonalController extends Controller
         for($x = 0; $x < $request->input('numUsers'); $x++){
             $ccArray[$x] = $faker->creditCardDetails;
         }
+        print_r($ccArray);
         return view('personal.result')->with('array', $ccArray)->with('name',$nameArray);
     }
     
