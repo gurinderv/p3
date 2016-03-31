@@ -2,7 +2,7 @@
 
 
 @section('title')
-    The Hacker's Best Friend Toolkit
+    THBFT: Lorem Generator
 @stop
 
 
@@ -12,7 +12,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific stylesheets.
 --}}
 @section('head')
-    <link href="/css/books/show.css" type='text/css' rel='stylesheet'>
+
 @stop
 
 @section('subheadline')
@@ -22,7 +22,7 @@ such as a page specific stylesheets.
 @section('content')
     
         Create spam text to send to your friends. Simply input the number of paragraphs and any options you wish, then copy/paste the resulting text into your email window. We currently limit you to 10 paragraphs of text... because 11 is just mean!
-         <h1>Lorem Ipsum Generator</h1>
+         <p>
         <form method="post" action="/lorem">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
@@ -36,7 +36,7 @@ such as a page specific stylesheets.
             </ul>
         @endif  
             
-          <input type="submit" value="Generate Text!">
+          <input type="submit" class="submit" value="Generate Text!">
         </form>
 
 

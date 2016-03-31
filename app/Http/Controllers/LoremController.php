@@ -19,7 +19,7 @@ class LoremController extends Controller
     public function postIndex(Request $request)
     {
         $this->validate($request, [
-        'numParagraphs' => 'required|numeric|max:10'  
+        'numParagraphs' => 'required|numeric|max:10|min:1'  
     ]);
         
         $lipsum = new Lorem();

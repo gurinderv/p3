@@ -13,7 +13,6 @@ class Controller extends BaseController
     
     public function getIndex()
     {
-        //return 'welcome - blade page';
         return view('welcome');
     }
 

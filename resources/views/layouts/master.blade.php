@@ -7,7 +7,7 @@
     </title>
 
     <meta charset='utf-8'>
-    <link href="/css/hacker.css" type='text/css' rel='stylesheet'>
+    <link href="/css/view.css" type='text/css' rel='stylesheet'>
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
@@ -24,17 +24,18 @@
 <body>
 
     <header>
-        <img src='http://2.bp.blogspot.com/-sr-vjmy9uUc/UacqykvBfaI/AAAAAAAAAEE/m242AGAe9FA/s1600/Logo-6-hacker.jpg'
+        <img class="logoImg" src='http://2.bp.blogspot.com/-sr-vjmy9uUc/UacqykvBfaI/AAAAAAAAAEE/m242AGAe9FA/s1600/Logo-6-hacker.jpg'
         alt='Hacker Logo'>
         
         <h1>The Hacker's Best Friend Toolkit</h1>
         
         {{-- Variable subheading for each page --}}
-        <h2>@yield('subheadline', 'Available tools below')</h2>
+        <h2>@yield('subheadline')</h2>
     </header>
 
     <section>
         {{-- Main page content will be yielded here --}}
+        <p>
         @yield('content')
     </section>
 

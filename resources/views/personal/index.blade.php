@@ -2,7 +2,7 @@
 
 
 @section('title')
-    The Hacker's Best Friend Toolkit
+    THBFT: Personal Information Generator
 @stop
 
 
@@ -12,7 +12,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific stylesheets.
 --}}
 @section('head')
-    <link href="test.css" type='text/css' rel='stylesheet'>
+
 @stop
 
 @section('subheadline')
@@ -22,7 +22,7 @@ such as a page specific stylesheets.
 @section('content')
     
         Select up to 5 suckers you want to scam. The system will pull from our database of users and return their names and credit card information. Enjoy!
-         <h1>Personal Info Generator</h1>
+        <p>
         <form method="post" action="/personal">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
           
@@ -44,7 +44,7 @@ such as a page specific stylesheets.
             </ul>
         @endif
             
-            <input type="submit" value="Get Me Suckers!">
+            <input type="submit" class="submit" value="Get Me Suckers!">
         </form>
 
 @stop

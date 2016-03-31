@@ -2,7 +2,7 @@
 
 
 @section('title')
-    The Hacker's Best Friend Toolkit
+    THBFT: Personal Information Generator
 @stop
 
 
@@ -12,7 +12,7 @@ Use it to add specific things that *this* View needs in the head,
 such as a page specific stylesheets.
 --}}
 @section('head')
-    <link href="test.css" type='text/css' rel='stylesheet'>
+
 @stop
 
 @section('subheadline')
@@ -22,14 +22,18 @@ such as a page specific stylesheets.
 @section('content')
        
          <p>Below is the information you requested. Enjoy your new found wealth!</p>
-      <!--  {{ $x = 0 }} -->
+      
+        <p class="returnResult">
+<!--  {{ $x = 0 }} -->
         @foreach ($array as $arr)
             Name: {{$name[$x]}} <br>
             Card Type: {{$arr['type']}} <br>
             Card Number: {{$arr['number']}}<br>
-            Card Expiration: {{$arr['expirationDate']}}<br>
+            Card Expiration: {{$arr['expirationDate']}}<p>
           <!--  {{$x += 1}} -->
-<p>
-        @endforeach   
+        @endforeach  
+            <p>
+        </p>
+        
 @stop
 

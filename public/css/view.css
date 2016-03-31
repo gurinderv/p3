@@ -1,0 +1,60 @@
+html {
+  font-family: sans-serif; 
+}
+
+body {
+    margin: 10px;
+}
+
+footer,
+header {
+    margin-top: 5em;
+    display: block;
+}
+
+a {
+    background-color: transparent;
+    text-decoration-line: none;
+    font-weight: bold;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    color: yellow;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+}
+
+img {
+    border: 0;
+    float: right; 
+}
+
+header {
+    width: 100%;
+}
+
+.returnResult{
+    margin-top: 3em;    
+}
+
+.submit {
+    overflow: visible;
+    padding: .2em;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+input {
+  line-height: normal;
+}
