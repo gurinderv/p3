@@ -4,18 +4,18 @@ Here you will be able to access tools like our Lorem Ipsum Generator which is a 
 
 ###Live URL:
 
-http://p2.gurindervirdi.me
+<http://p3.gurindervirdi.me>
 
 ###Link to screencast demo of this project:
 
-http://screencast.com/t/uFj7qsnuZoJT
+<http://>
 
 ##Description and Details for the Teaching Team
 
 ###Lorem Generator
-uses the joshtronic/php-loremipsum package
-implements calls to grab a given number of lorem ipsum paragraphs
+ * uses the joshtronic/php-loremipsum package
+ * implements calls to grab a given number of lorem ipsum paragraphs
 
 ###Personal Information Generator
-uses the fzaninotto/faker package
-implements calls to grab a given number of random credit card information
+ * uses the fzaninotto/faker package
+ * implements calls to grab a given number of random credit card information
