@@ -8,8 +8,7 @@ Here you will be able to access tools like our Lorem Ipsum Generator which is a 
 
 ###Link to screencast demo of this project:
 
-<http://>
-
+<http://screencast.com/t/VjZMRkeZ>
 
 ###Description and Details for the Teaching Team
 
