@@ -10,7 +10,8 @@ Here you will be able to access tools like our Lorem Ipsum Generator which is a 
 
 <http://>
 
-##Description and Details for the Teaching Team
+
+###Description and Details for the Teaching Team
 
 ###Lorem Generator
  * uses the joshtronic/php-loremipsum package
